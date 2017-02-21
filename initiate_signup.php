@@ -37,6 +37,8 @@
             //sign up as root
             //no one has nominated you
             echo "<br><br><br>it is empty";
+            $_SESSION['user_name'] = $user_name;
+            $_SESSION['password'] = $password;
 
             //creating entry in user table............
 

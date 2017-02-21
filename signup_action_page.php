@@ -4,24 +4,36 @@
 
 <?php 
 	require 'dbms_connection.php';
-	
-	$user_name = $_POST["user_name"]; 
-	$company_given_id = $_POST["company_given_id"];
-	$password = $_POST["password"];
-	$password_re = $_POST["password_re"];
+	require 'smarty_configs.php';
 
-	if($password != $password_re)
-	{
-		//show error at page
-		//exit();
-	}
 
-	 $_SESSION["user_name"]= $user_name;
-	// $_SESSION["company_id"]= $company_id;
-	// $_SESSION["password"]= $password;
-	// $_SESSION["password_re"]= $password_re;
 
-    require 'initiate_signup.php';
+    if (isset($_SESSION['user_name']) && isset($_SESSION['password']))
+    {
+        //logged in HTML and code here
+        $user_name = $_SESSION['user_name'];
+        $password = $_SESSION['password'];
+        require "validate_login.php";
+        exit();
+    }
+    else
+    {
+        $user_name = $_POST["user_name"];
+        $company_given_id = $_POST["company_given_id"];
+        $password = $_POST["password"];
+        $password_re = $_POST["password_re"];
+
+        if($password != $password_re)
+        {
+
+            $smarty -> assign('response', "password field does not match");
+            $smarty -> display('templates/unsuccess_signup_response.tpl');
+            exit();
+        }
+        require 'initiate_signup.php';
+
+    }
+
    
 ?>
 

@@ -29,6 +29,7 @@
     else if($catch == $password)
     {
         $_SESSION["user_name"] = $user_name;
+        $_SESSION["password"] = $password;
         if($result[1] == 0)
         {
             date_default_timezone_set('Asia/Kolkata');
@@ -47,6 +48,8 @@
                 exit();
             }
             $test_date = $result[0];
+
+            //for calculating the date for next test.....
 
             date_default_timezone_set('Asia/Kolkata');
             $today_date = date('Y-m-d');

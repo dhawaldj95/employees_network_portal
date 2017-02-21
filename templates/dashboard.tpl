@@ -8,14 +8,9 @@
 
 		   <h1>Welcome to dashboard</h1>
 		   <p>{$user_name}</p>
-		  <!-- <form action="../action_page.php" method="post">
-		  
-            User name:<br>
-            <input id="user_name" type="text" name="user_name" value=""><br>
-            Password:<br>
-            <input id="password" type="password" name="password" value=""><br>
-            <input type="submit" value="Submit">
-          </form> -->
+			<a href="render_nominate_members_action_page.php">Nominate Members</a>
+			<a href = "your_team.php">See your team members</a>
+			<a href="logout.php">Logout</a>
 		</div>
 	</body>
 </html>
