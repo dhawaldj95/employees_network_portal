@@ -8,7 +8,7 @@
 
     <h1>Nomination Response</h1>
     <p>{$response}</p>
-    <a href="dashboard.tpl">Back to Dashboard</a>
+    <a href="dashboard_back.php">Back to Dashboard</a>
 
 </div>
 </body>

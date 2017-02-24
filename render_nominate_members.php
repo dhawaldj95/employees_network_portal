@@ -8,19 +8,13 @@
 
 
     $stmt = $conn->prepare("SELECT Info_table.name FROM Info_table LEFT JOIN user_table 
-            ON user_table.user_name = Info_table.user_name WHERE user_table.user_name IS null");
+            ON user_table.user_name = Info_table.user_name WHERE user_table.user_name IS NULL");
     $stmt->execute();
     $result =$stmt->fetchAll();
-
-    $smarty->display('templates/nominate_members_header.tpl');
-    foreach ($result as $value) {
-        //echo $value['name'];
-        $smarty->assign('response', $value['name']);
-        $smarty->display('templates/nominate_members_content.tpl');
-
-    }
-    $smarty->display('templates/nominate_members_footer.tpl');
+    $full_names = array_column($result, 'name');
 
 
-
+    $smarty->assign('display', $full_names);
+    $smarty->assign('value' , $full_names);
+    $smarty->display('templates/render_nominate_members.tpl');
 ?>

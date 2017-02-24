@@ -73,15 +73,6 @@
             $smarty -> display('templates/unsuccess_signup_response.tpl');
         }
 
-
-
-
-
-
-
-
-
-
     // if($score >= 1)
     // {
     //     //You have passed the test
