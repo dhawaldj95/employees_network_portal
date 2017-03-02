@@ -1,6 +1,6 @@
 <?php
 
-echo "inside dbms_connection";
+
 require_once("dbms_property.php");
 
 try {
@@ -13,4 +13,3 @@ catch(PDOException $e)
     {
     echo "Connection failed: " . $e->getMessage();
     }
-?>

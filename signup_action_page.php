@@ -8,11 +8,12 @@
 
 
 
-    if (isset($_SESSION['user_name']) && isset($_SESSION['password']))
+    if (isset($_SESSION['user_name']) && isset($_SESSION['id']))
     {
         //logged in HTML and code here
         $user_name = $_SESSION['user_name'];
         $password = $_SESSION['password'];
+        $id = $_SESSION['id'];
         require "validate_login.php";
         exit();
     }
@@ -25,7 +26,6 @@
 
         if($password != $password_re)
         {
-
             $smarty -> assign('response', "password field does not match");
             $smarty -> display('templates/unsuccess_signup_response.tpl');
             exit();

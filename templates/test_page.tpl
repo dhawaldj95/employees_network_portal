@@ -7,7 +7,7 @@
 		<div>
 
 		   <h1>Welcome to Test</h1>
-		   <p>{$user_name}</p>
+			<p id="userName">{$user_name}</p>
 		   <p>Here is your test</p>
 
 
