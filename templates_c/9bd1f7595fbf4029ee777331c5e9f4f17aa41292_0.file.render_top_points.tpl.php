@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-03-02 15:28:47
+/* Smarty version 3.1.31, created on 2017-03-03 18:43:42
   from "/var/www/companyX.com/public_html/templates/render_top_points.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_58b7ecd7aa6557_90703119',
+  'unifunc' => 'content_58b96c0663d915_13187192',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bd1f7595fbf4029ee777331c5e9f4f17aa41292' => 
     array (
       0 => '/var/www/companyX.com/public_html/templates/render_top_points.tpl',
-      1 => 1488448726,
+      1 => 1488546820,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b7ecd7aa6557_90703119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b96c0663d915_13187192 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,6 +42,7 @@ function content_58b7ecd7aa6557_90703119 (Smarty_Internal_Template $_smarty_tpl)
         <a href = "your_team.php">See your team members</a><br><br>
         <a href="top_points.php">Top Rankers</a><br><br>
         <a href="logout.php">Logout</a><br><br>
+        <a href="../dashboard_back.php">Dashboard</a>
 
 
     </div>
@@ -99,7 +100,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_product'] = $__section_product_0_saved;
             </tbody>
         </table>
         <br><br>
-        <a href="../dashboard_back.php">Dashboard</a>
+
     </div>
 
 

@@ -1,8 +1,9 @@
 <?php
    
     require("smarty_configs.php");
-    
-    echo $company_given_id;
+
+
+echo $company_given_id;
     //$user_name = $_SESSION["user_name"];
 
     //check in info table for company validation
@@ -15,7 +16,7 @@
         if(empty($result))
         {
             //not valid company person
-            echo "not valid company person";
+//            echo "not valid company person";
             $smarty -> assign('response', "not valid person");
             $smarty -> display('templates/unsuccess_signup_response.tpl');
             exit();
@@ -25,9 +26,9 @@
         $email_id = $result[1];
         //echo $user_name;
 
-    //check in user table for ensuring not registered......
+        //check in user table for ensuring not registered......
 
-    $stmt2 = $conn ->prepare("SELECT user_name FROM user_table WHERE user_name = :user_name");
+        $stmt2 = $conn ->prepare("SELECT user_name FROM user_table WHERE user_name = :user_name");
         $stmt2->bindParam(':user_name', $user_name);
         $stmt2->execute();
         $result = $stmt2->fetch();
@@ -39,6 +40,7 @@
             echo "<br><br><br>not in user table";
             $_SESSION['user_name'] = $user_name;
             $_SESSION['password'] = $password;
+
 
             //creating entry in user table............
 
@@ -59,7 +61,9 @@
             $stmt4->execute();
             $result4 = $stmt4->fetch();
             $id = $result4[0];
-            echo $id;
+
+            $_SESSION['id'] =$id;
+
             //create entry in nomination table...........
 
 
@@ -68,6 +72,15 @@
             $stmt3->bindParam(':nominee',$id);
             $stmt3->execute();
 
+            //create entry in active table
+            $status =1;
+            $stmt3 = $conn->prepare("INSERT INTO active_table (user_id, status)
+            VALUES (:id, :status)");
+            $stmt3->bindParam(':id',$id);
+            $stmt3->bindParam(':status', $status);
+            $stmt3->execute();
+
+            //start session for future
 
             $smarty -> assign('user_name', $user_name);
             $smarty -> display('templates/success_signup_response.tpl');

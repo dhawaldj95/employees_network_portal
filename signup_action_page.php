@@ -19,6 +19,7 @@
     }
     else
     {
+
         $user_name = $_POST["user_name"];
         $company_given_id = $_POST["company_given_id"];
         $password = $_POST["password"];

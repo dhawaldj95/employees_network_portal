@@ -43,6 +43,9 @@
         $stmt3 -> execute();
         $result3 = $stmt3->fetch();
 
+        //get the active status
+
+
 
         $smarty->assign('output' , $result);
         $smarty->assign('user_name', $user_name);

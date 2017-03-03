@@ -16,18 +16,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `points_table`
+-- Table structure for table `Info_table`
 --
 
-DROP TABLE IF EXISTS `points_table`;
+DROP TABLE IF EXISTS `Info_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `points_table` (
+CREATE TABLE `Info_table` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(45) DEFAULT NULL,
-  `points` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+  `company_given_id` int(8) NOT NULL,
+  `email_id` varchar(45) NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `user_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `company_given_id_UNIQUE` (`company_given_id`),
+  UNIQUE KEY `email_id_UNIQUE` (`email_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -39,4 +43,4 @@ CREATE TABLE `points_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-21 19:27:26
+-- Dump completed on 2017-03-03 19:18:42

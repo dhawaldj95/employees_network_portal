@@ -16,17 +16,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `role_table`
+-- Table structure for table `nomination_table`
 --
 
-DROP TABLE IF EXISTS `role_table`;
+DROP TABLE IF EXISTS `nomination_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `role_table` (
-  `id` int(11) NOT NULL,
-  `role` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `nomination_table` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nominee_id` int(11) DEFAULT NULL,
+  `nominator_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_nominee_idx` (`nominee_id`),
+  KEY `fk_nominator_idx` (`nominator_id`),
+  CONSTRAINT `fk_nominator` FOREIGN KEY (`nominator_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_nominee` FOREIGN KEY (`nominee_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -38,4 +43,4 @@ CREATE TABLE `role_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-21 19:27:26
+-- Dump completed on 2017-03-03 19:18:42

@@ -85,6 +85,10 @@
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 
+        //generate certificate
+
+        require ("certificate_generation.php");
+
         $smarty -> assign('user_name', $user_name);
         $smarty -> display('templates/dashboard.tpl');
     }    

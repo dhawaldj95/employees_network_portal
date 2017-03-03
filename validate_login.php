@@ -4,7 +4,7 @@
 
 <?php
 
-
+    require_once ("dbms_connection.php");
     require_once("smarty_configs.php");
 
     // verify the login

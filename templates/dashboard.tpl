@@ -16,6 +16,7 @@
 				<a href="render_nominate_members_action_page.php">Nominate Members</a><br><br>
 				<a href = "your_team.php">See your team members</a><br><br>
 				<a href="top_points.php">Top Rankers</a><br><br>
+				<a href="display_certificate.php">Certificate</a><br><br>
 				<a href="logout.php">Logout</a><br><br>
 
 

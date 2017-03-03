@@ -19,8 +19,6 @@ session_start();
     echo "inside test_analysis";
     $id =$_SESSION['id'];
     //update the time slot to current date in test_date_table
-
-    // Change the line below to your timezone!
     date_default_timezone_set('Asia/Kolkata');
     $test_date = date('Y/m/d');
     echo "$test_date";
@@ -97,6 +95,8 @@ session_start();
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
+
+        require ("certificate_generation.php");
 
         $smarty -> assign('user_name', $user_name);
         $smarty -> display('templates/dashboard.tpl');

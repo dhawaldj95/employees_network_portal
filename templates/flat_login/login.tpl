@@ -40,13 +40,13 @@
   </div>
   <div class="form">
     <h2>Create an account</h2>
-    <form action="../login_action_page.php" method="post">
+    <form action="../../signup_action_page.php" method="post">
       <input id="user_name" type="text" name="user_name" placeholder="Username"/>
       <input id="company_id" type="number" name="company_given_id" placeholder="SAP id"/>
       <input id="password" type="password" name="password" placeholder="Password"/>
       <input id="password_re" type="password" name="password_re" placeholder="Re-Password"/>
 
-      <button>Register</button>
+      <button type="submit">Register</button>
     </form>
   </div>
   <div class="cta"><a href=#>Forgot your password?</a></div>

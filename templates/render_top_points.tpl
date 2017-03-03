@@ -15,6 +15,7 @@
         <a href = "your_team.php">See your team members</a><br><br>
         <a href="top_points.php">Top Rankers</a><br><br>
         <a href="logout.php">Logout</a><br><br>
+        <a href="../dashboard_back.php">Dashboard</a>
 
 
     </div>
@@ -53,7 +54,7 @@
             </tbody>
         </table>
         <br><br>
-        <a href="../dashboard_back.php">Dashboard</a>
+
     </div>
 
 

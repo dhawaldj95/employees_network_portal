@@ -16,20 +16,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Info_table`
+-- Table structure for table `user_table`
 --
 
-DROP TABLE IF EXISTS `Info_table`;
+DROP TABLE IF EXISTS `user_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Info_table` (
+CREATE TABLE `user_table` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `company_given_id` int(8) NOT NULL,
-  `email_id` varchar(45) NOT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `user_name` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  `user_name` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `email_id` varchar(45) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_user_table_1_idx` (`role_id`),
+  CONSTRAINT `fk_user_table_1` FOREIGN KEY (`role_id`) REFERENCES `role_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -41,4 +44,4 @@ CREATE TABLE `Info_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-21 19:27:26
+-- Dump completed on 2017-03-03 19:18:42
