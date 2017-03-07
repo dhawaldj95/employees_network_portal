@@ -4,6 +4,7 @@
     <title>Un Successful Login</title>
 </head>
 <body>
+<div id = "header"></div>
 <p>UnSuccessful login for <br></p>
 <p>{$response}</p>
 

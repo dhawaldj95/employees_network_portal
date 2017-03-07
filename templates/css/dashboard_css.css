@@ -4,10 +4,11 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 16px;
     color: #333333;
-    /*background-color: #e9e9e9;*/
-    background-color: grey;
-    /*background: url("/images/beautiful-girl-smiling.jpg") no-repeat center center fixed;*/
-    background-size: cover ;
+    background-color: #e9e9e9;
+    /* background-color: #00005a; */
+    /* background: url(/images/beautiful-girl-smiling.jpg) no-repeat center center fixed; */
+    background-size: cover;
+    margin: 0px;
 }
 
 p {
@@ -18,7 +19,7 @@ h1 {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 30px;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     /*text-align: center;*/
 }
 
@@ -36,7 +37,7 @@ input {
 /**************** Pseudo classes ****************/
 
 a:link {
-    color: #00CC00;
+    color: #ffffff;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -48,7 +49,7 @@ li :link {
 }
 
 a:visited {
-    color: #c5becc;
+    color: #f7eded;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -60,7 +61,7 @@ li a:visited {
 }
 
 a:hover {
-    color: rgb(88, 255, 43);
+    color: rgb(255, 48, 193);
     padding-bottom: 5px;
     font-weight: bold;
     text-decoration: underline;
@@ -85,58 +86,101 @@ a:active {
 
 #navigation {
     position: absolute;
-    padding: 7px;
+    padding: 0px 7px;
     width: 265px;
     height: 600px;
-    margin: 0;
-    margin-top: 50px;
-    border-right: 1px solid #C6EC8C;
+    /*border-right: 1px solid #C6EC8C;*/
     font-weight: normal;
-    /*background-color: #33b5e5;*/
-    border-radius: 20px;
+    /*background-color: #3b1480;*/
+    /*border-radius: 20px;*/
+    background: url(/images/background.jpg) repeat center center fixed;
 }
 
 #centerDoc {
     position: absolute;
-    padding: 10px;
-    margin-top: 50px;
-    margin-left: 285px;
+    padding: 0px 10px;
+    margin-top: 0px;
+    margin-left: 280px;
     /*border: 2px solid black;*/
-    border-radius: 40px 15px;
-    width: 75%;
+    /*border-radius: 40px 15px;*/
+    width: 77%;
     height: 600px;
-    color: #eeeeee;
+    color: black;
+    /*background-color: #3b1480;*/
+    background: linear-gradient(0deg,darkgray,lightgray);
 }
 
-#emu{
-    position: absolute;
-    padding: 0 0 0px 10px; /*top right bottom left*/
-    margin-top: 150px;
-    margin-left: 235px;
-    border: 2px solid black;
-    border-radius: 40px 15px;
-    width: 80%;
-    height: 600px;
-//background: url("G:/wallpapers/ammunition_weapons-wallpaper-1024x768.jpg");
-
-}
 #userName{
     color: white;
-    text-decoration: underline;
-    font-size: 22px;
+    /* text-decoration: underline; */
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 3px solid white;
+    width: 100%;
 }
 
-.inlineDiv{
-    width: 170px;
-    display: inline-block;
-    background-color: black;
-    margin: 8px;
+/*.inlineDiv{*/
+    /*width: 170px;*/
+    /*display: inline-block;*/
+    /*background-color: black;*/
+    /*margin: 8px;*/
+    /*padding: 5px;*/
+    /*height: 190px;*/
+    /*vertical-align: top;*/
+    /*border-radius: 15px;*/
+
+/*}*/
+
+.link{
+    background-color: #666666;
+    border-radius: 5px;
+}
+
+a p{
+    height: 25px;
+    width: auto;
     padding: 5px;
-    height: 190px;
-    vertical-align: top;
-    border-radius: 15px;
+    color: #ffffff;
+    margin: 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+a p:hover {
+    color: rgb(255, 48, 193);
+    padding-bottom: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: white;
+    opacity: 0.5;
+}
+#topPoints{
+    align-self: center;
+    font-size: x-large;
+    width: 700px;
+    text-align: center;
 
 }
 th, td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ffffff;
+    width: 233px;
 }
+#header{
+    background-color: #3b1480;
+    width: 100%;
+    height: 70px;
+}
+.heading{
+    font-size: large;
+    align-content: center;
+    margin-left: 0%;
+    width: auto;
+    text-decoration: underline;
+}
+/*#footer{*/
+    /*background-color: #33b5e5;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+/*}*/

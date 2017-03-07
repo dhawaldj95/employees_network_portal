@@ -43,6 +43,15 @@
         $stmt3 -> execute();
         $result3 = $stmt3->fetch();
 
+        ///get the rank of user
+
+        $stmt4 = $conn->prepare("SELECT ranks FROM (SELECT user_id, points, @curRank := @curRank +1 AS ranks
+        FROM points_table  , (SELECT @curRank := 0) r
+         ORDER BY points DESC) t WHERE user_id = :id");
+        $stmt4 -> bindParam(':id', $id);
+        $stmt4 -> execute();
+        $result4 = $stmt4->fetch();
+
         //get the active status
 
 
@@ -50,13 +59,14 @@
         $smarty->assign('output' , $result);
         $smarty->assign('user_name', $user_name);
         $smarty->assign('user_points', $result3[0]);
+        $smarty->assign('user_rank', $result4[0]);
         //$smarty->assign('names' , $user_names_top_points);
         $smarty->display('templates/render_top_points.tpl');
         exit();
     }
     else
     {
-        $message = "please login";
+
         $smarty->assign(':message', $message);
-        $smarty->display("templates/login.tpl");
+        $smarty->display("templates/flat_login/login.tpl");
     }

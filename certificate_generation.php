@@ -9,6 +9,7 @@
     require_once ("smarty_configs.php");
     $id =$_SESSION['id'];
     $user_name = $_SESSION['user_name'];
+
     //get the name from info table
     $stmt = $conn->prepare("SELECT name FROM Info_table WHERE user_name = :user_name");
     $stmt->bindParam(':user_name', $user_name);
@@ -16,8 +17,16 @@
     $result = $stmt->fetch();
     $real_name = $result[0];
 
+    //get the score from score table
+    $stmt2 = $conn->prepare("SELECT score FROM score_table WHERE user_id = :id");
+    $stmt2->bindParam(':id', $id);
+    $stmt2->execute();
+    $result2 = $stmt2->fetch();
+    $score = $result2[0];
 
-    //Set the Content Type
+    //today date
+    date_default_timezone_set('Asia/Kolkata');
+    $today_date = date('Y-m-d');
 
 
     // Create Image From Existing File
@@ -38,7 +47,9 @@
 
     // Print Text On Image
     imagettftext($jpg_image, 150, 0, $x, 925, $white, $font_path, $text);
-    var_dump($jpg_image);
+    imagettftext($jpg_image, 150, 0, 500, 1550, $white, $font_path, $today_date);
+    imagettftext($jpg_image, 150, 0, 1700, 1550, $white, $font_path, $score);
+
     // Send Image to Browser
 
     $certi_path = "certificates/".$user_name;

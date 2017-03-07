@@ -4,6 +4,7 @@
     <title>Nomination Response</title>
 </head>
 <body>
+<div id = "header"></div>
 <div>
 
     <h1>Nomination Response</h1>

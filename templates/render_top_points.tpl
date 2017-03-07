@@ -9,27 +9,23 @@
 
     <div id= "navigation">
         <p id="userName">{$user_name}</p>
+
         {*<h2>The Main navigation</h2>*}
 
-        <a href="render_nominate_members_action_page.php">Nominate Members</a><br><br>
-        <a href = "your_team.php">See your team members</a><br><br>
-        <a href="top_points.php">Top Rankers</a><br><br>
-        <a href="logout.php">Logout</a><br><br>
-        <a href="../dashboard_back.php">Dashboard</a>
-
+        <a href="render_nominate_members_action_page.php"><p>Nominate Members</p></a>
+        <a href = "your_team.php"><p>See your team members</p></a>
+        <a href="top_points.php"><p>Top Rankers</p></a>
+        <a href="display_certificate.php"><p>Certificate</p></a>
+        <a href="logout.php"><p>Logout</p></a>
 
     </div>
     <div id="centerDoc" style="align-content: center">
 
-        <p>Your Points: {$user_points}</p><br>
-        {*<p>{$user_points}</p><br><br>*}
-
-
+        <p class="heading">Your Points: {$user_points}</p>
+        <p class="heading">Your Rank: {$user_rank}</p>
         <h1>The top points</h1>
-        {*{html_table loop=$names loop=$points cols="Names, Points "}*}
 
-
-        <table>
+        <table id="topPoints">
             <thead>
             <tr>
                 <th>Rank</th>
@@ -54,10 +50,7 @@
             </tbody>
         </table>
         <br><br>
-
     </div>
-
-
 </body>
 </html>
 

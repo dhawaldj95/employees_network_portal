@@ -4,6 +4,7 @@
     <title>CompanyX Response</title>
   </head>
  <body>
+ <div id = "header"></div>
     	{*<h1>Login Response</h1>*}
         <h1>{$response_heading}</h1>
     	<p>{$response}</p>
