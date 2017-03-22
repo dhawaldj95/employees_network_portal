@@ -9,7 +9,7 @@
 
     <h1>Nomination Response</h1>
     <p>{$response}</p>
-    <a href="dashboard_back.php">Back to Dashboard</a>
+    <a href="dashboard_back">Back to Dashboard</a>
 
 </div>
 </body>

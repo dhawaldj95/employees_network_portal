@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-03-02 15:36:12
+/* Smarty version 3.1.31, created on 2017-03-21 16:14:33
   from "/var/www/companyX.com/public_html/templates/test_page.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_58b7ee9445c7f6_70358251',
+  'unifunc' => 'content_58d1041138fd42_07010781',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '613118c896112499be1c17e077447457f189244f' => 
     array (
       0 => '/var/www/companyX.com/public_html/templates/test_page.tpl',
-      1 => 1488446636,
+      1 => 1490092127,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b7ee9445c7f6_70358251 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d1041138fd42_07010781 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +36,7 @@ function content_58b7ee9445c7f6_70358251 (Smarty_Internal_Template $_smarty_tpl)
 		   <p>Here is your test</p>
 
 
-		  <form action="../test_action_page.php" method="post">
+		  <form action="../test_action_page" method="post">
 		  
             Q1:Vehicle:<br>
             <input type="radio" name="vehicle" value="bike" checked="checked">I have a bike<br>

@@ -7,15 +7,15 @@
 </head>
 <body>
 <div>
-    <h1>Welcome to dashboard</h1>
+    
 
     <div id= "navigation">
         <p id="userName">{$user_name}</p>
         {*<h2>The Main navigation</h2>*}
 
-        <a href="../test_back.php"><p>Test</p></a><br><br>
-        <a href="top_points.php"><p>Top Rankers</p></a><br><br>
-        <a href="logout.php"><p>Logout</p></a><br><br>
+        <a href="../test_back"><p>Test</p></a><br><br>
+        <a href="top_points"><p>Top Rankers</p></a><br><br>
+        <a href="logout"><p>Logout</p></a><br><br>
 
 
     </div>

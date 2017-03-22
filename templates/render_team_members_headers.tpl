@@ -13,11 +13,11 @@
         <p id="userName">{$user_name}</p>
         {*<h2>The Main navigation</h2>*}
 
-        <a href="render_nominate_members_action_page.php"><p>Nominate Members</p></a>
-        <a href = "your_team.php"><p>See your team members</p></a>
-        <a href="top_points.php"><p>Top Rankers</p></a>
-        <a href="display_certificate.php"><p>Certificate</p></a>
-        <a href="logout.php"><p>Logout</p></a>
+        <a href="render_nominate_members_action_page"><p>Nominate Members</p></a>
+        <a href = "your_team"><p>See your team members</p></a>
+        <a href="top_points"><p>Top Rankers</p></a>
+        <a href="display_certificate"><p>Certificate</p></a>
+        <a href="logout"><p>Logout</p></a>
 
     </div>
     <div id="centerDoc">

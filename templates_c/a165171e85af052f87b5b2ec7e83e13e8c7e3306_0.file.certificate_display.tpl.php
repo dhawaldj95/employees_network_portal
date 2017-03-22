@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-03-06 18:38:56
+/* Smarty version 3.1.31, created on 2017-03-21 16:07:15
   from "/var/www/companyX.com/public_html/templates/certificate_display.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_58bd5f689305b8_24245138',
+  'unifunc' => 'content_58d1025b8894a7_79704996',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a165171e85af052f87b5b2ec7e83e13e8c7e3306' => 
     array (
       0 => '/var/www/companyX.com/public_html/templates/certificate_display.tpl',
-      1 => 1488805735,
+      1 => 1490091707,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58bd5f689305b8_24245138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d1025b8894a7_79704996 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,11 +40,11 @@ function content_58bd5f689305b8_24245138 (Smarty_Internal_Template $_smarty_tpl)
 </p>
     
 
-    <a href="render_nominate_members_action_page.php"><p>Nominate Members</p></a>
-    <a href = "your_team.php"><p>See your team members</p></a>
-    <a href="top_points.php"><p>Top Rankers</p></a>
-    <a href="display_certificate.php"><p>Certificate</p></a>
-    <a href="logout.php"><p>Logout</p></a>
+    <a href="render_nominate_members_action_page"><p>Nominate Members</p></a>
+    <a href = "your_team"><p>See your team members</p></a>
+    <a href="top_points"><p>Top Rankers</p></a>
+    <a href="display_certificate"><p>Certificate</p></a>
+    <a href="logout"><p>Logout</p></a>
 
 </div>
     <div id="centerDoc">

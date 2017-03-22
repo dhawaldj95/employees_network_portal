@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-03-21 16:07:13
-  from "/var/www/companyX.com/public_html/templates/render_top_points.tpl" */
+/* Smarty version 3.1.31, created on 2017-03-21 16:12:36
+  from "/var/www/companyX.com/public_html/templates/render_top_points_inactive.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_58d102598de1c9_05575288',
+  'unifunc' => 'content_58d1039c1eb1c9_52764347',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '9bd1f7595fbf4029ee777331c5e9f4f17aa41292' => 
+    '9dfc36af515a149c4d33aef3f218006d300eaa23' => 
     array (
-      0 => '/var/www/companyX.com/public_html/templates/render_top_points.tpl',
-      1 => 1490091968,
+      0 => '/var/www/companyX.com/public_html/templates/render_top_points_inactive.tpl',
+      1 => 1490091986,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58d102598de1c9_05575288 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d1039c1eb1c9_52764347 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,17 +33,16 @@ function content_58d102598de1c9_05575288 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 
+
     <div id= "navigation">
         <p id="userName"><?php echo $_smarty_tpl->tpl_vars['user_name']->value;?>
 </p>
-
         
 
-        <a href="render_nominate_members_action_page"><p>Nominate Members</p></a>
-        <a href = "your_team"><p>See your team members</p></a>
-        <a href="top_points"><p>Top Rankers</p></a>
-        <a href="display_certificate"><p>Certificate</p></a>
-        <a href="logout"><p>Logout</p></a>
+        <a href="../test_back"><p>Test</p></a><br><br>
+        <a href="top_points"><p>Top Rankers</p></a><br><br>
+        <a href="logout"><p>Logout</p></a><br><br>
+
 
     </div>
     <div id="centerDoc" style="align-content: center">

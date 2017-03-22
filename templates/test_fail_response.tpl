@@ -8,6 +8,6 @@
 <h4>{$user_name}</h4>
 <h1>You Failed the test!!!</h1>
 
-<a href="../logout.php">Logout</a>
+<a href="../logout">Logout</a>
 </body>
 </html>

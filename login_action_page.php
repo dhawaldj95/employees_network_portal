@@ -18,6 +18,10 @@
         require "dashboard_back.php";
         exit();
     }
+    // elseif (!isset($_SESSION['user_name'])&& !isset($_SESSION['id']))
+    // {
+    //     $smarty->display('templates/flat_login/login.tpl');
+    // }
     else
     {
         $input_id = $_POST["input_id"];

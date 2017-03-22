@@ -11,7 +11,7 @@
 		   <p>Here is your test</p>
 
 
-		  <form action="../test_action_page.php" method="post">
+		  <form action="../test_action_page" method="post">
 		  
             Q1:Vehicle:<br>
             <input type="radio" name="vehicle" value="bike" checked="checked">I have a bike<br>

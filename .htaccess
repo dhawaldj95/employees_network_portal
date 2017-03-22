@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+#RewriteRule ^render_nominate_members_action_page.php$ index.php [PT]
+#RewriteRule ^(.*)?(.php) index.php?url=$1 [L,QSA]
+#RewriteRule ^(.*)?(.tpl) index.php?url=$1 [L,QSA]
+#RewriteRule ^(.*) index.php?url=$1 [L,QSA]
+
+#AddType text/css .css 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^.*\.(jpe?g|css|js|gif|png)$ [NC]
+RewriteRule ^(.*)$ index.php?url=$1

@@ -8,7 +8,7 @@
     	{*<h1>Login Response</h1>*}
         <h1>{$response_heading}</h1>
     	<p>{$response}</p>
-        <a href="templates/flat_login/login.tpl">Login/SignUp</a>
+        <a href="templates/flat_login/login">Login/SignUp</a>
     	
     </body>
 </html>

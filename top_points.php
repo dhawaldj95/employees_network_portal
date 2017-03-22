@@ -53,16 +53,35 @@
         $result4 = $stmt4->fetch();
 
         //get the active status
+        $stmt = $conn->prepare("SELECT status FROM active_table WHERE user_id = :id");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        $status = $result[0];
 
+        if($status == 0)
+        {
+            $smarty->assign('output' , $result);
+            $smarty->assign('user_name', $user_name);
+            $smarty->assign('user_points', $result3[0]);
+            $smarty->assign('user_rank', $result4[0]);
+            //$smarty->assign('names' , $user_names_top_points);
+            $smarty->display('templates/render_top_points_inactive.tpl');
+            exit();
+        }
+        elseif($status != 0)
+        {
+             $smarty->assign('output' , $result);
+            $smarty->assign('user_name', $user_name);
+            $smarty->assign('user_points', $result3[0]);
+            $smarty->assign('user_rank', $result4[0]);
+            //$smarty->assign('names' , $user_names_top_points);
+            $smarty->display('templates/render_top_points.tpl');
+            exit();
 
+        }
 
-        $smarty->assign('output' , $result);
-        $smarty->assign('user_name', $user_name);
-        $smarty->assign('user_points', $result3[0]);
-        $smarty->assign('user_rank', $result4[0]);
-        //$smarty->assign('names' , $user_names_top_points);
-        $smarty->display('templates/render_top_points.tpl');
-        exit();
+       
     }
     else
     {
