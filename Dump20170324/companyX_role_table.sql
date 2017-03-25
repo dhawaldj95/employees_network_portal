@@ -16,21 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `test_date_table`
+-- Table structure for table `role_table`
 --
 
-DROP TABLE IF EXISTS `test_date_table`;
+DROP TABLE IF EXISTS `role_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `test_date_table` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `test_date` date DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_user_idx` (`user_id`),
-  CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+CREATE TABLE `role_table` (
+  `id` int(11) NOT NULL,
+  `role` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `role_table`
+--
+
+LOCK TABLES `role_table` WRITE;
+/*!40000 ALTER TABLE `role_table` DISABLE KEYS */;
+INSERT INTO `role_table` VALUES (1,'admin'),(2,'authenticated');
+/*!40000 ALTER TABLE `role_table` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -41,4 +48,4 @@ CREATE TABLE `test_date_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-03 19:18:41
+-- Dump completed on 2017-03-24 17:35:10

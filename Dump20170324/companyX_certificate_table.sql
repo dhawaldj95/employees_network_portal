@@ -16,21 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `active_table`
+-- Table structure for table `certificate_table`
 --
 
-DROP TABLE IF EXISTS `active_table`;
+DROP TABLE IF EXISTS `certificate_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `active_table` (
+CREATE TABLE `certificate_table` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `status` tinyint(1) DEFAULT '0',
+  `user_id` int(11) DEFAULT NULL,
+  `certificate_address` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_user_id_idx` (`user_id`),
-  CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  KEY `fk_certificate_table_1_idx` (`user_id`),
+  CONSTRAINT `fk_certificate_table_1` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `certificate_table`
+--
+
+LOCK TABLES `certificate_table` WRITE;
+/*!40000 ALTER TABLE `certificate_table` DISABLE KEYS */;
+INSERT INTO `certificate_table` VALUES (4,33,'certificates/basant.sharma'),(5,34,'certificates/akash.jain');
+/*!40000 ALTER TABLE `certificate_table` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -41,4 +51,4 @@ CREATE TABLE `active_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-03 19:18:42
+-- Dump completed on 2017-03-24 17:35:10

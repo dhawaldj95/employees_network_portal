@@ -16,24 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user_table`
+-- Table structure for table `points_table`
 --
 
-DROP TABLE IF EXISTS `user_table`;
+DROP TABLE IF EXISTS `points_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_table` (
+CREATE TABLE `points_table` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT '0',
-  `email_id` varchar(45) DEFAULT NULL,
-  `role_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `points` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_user_table_1_idx` (`role_id`),
-  CONSTRAINT `fk_user_table_1` FOREIGN KEY (`role_id`) REFERENCES `role_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+  KEY `fk_user_points_idx` (`user_id`),
+  CONSTRAINT `fk_user_points` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `points_table`
+--
+
+LOCK TABLES `points_table` WRITE;
+/*!40000 ALTER TABLE `points_table` DISABLE KEYS */;
+INSERT INTO `points_table` VALUES (4,33,'15'),(5,34,'10');
+/*!40000 ALTER TABLE `points_table` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -44,4 +51,4 @@ CREATE TABLE `user_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-03 19:18:42
+-- Dump completed on 2017-03-24 17:35:11

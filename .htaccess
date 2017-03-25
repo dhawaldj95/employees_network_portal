@@ -9,4 +9,4 @@ RewriteEngine on
 #AddType text/css .css 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^.*\.(jpe?g|css|js|gif|png)$ [NC]
-RewriteRule ^(.*)$ index.php?url=$1
+RewriteRule ^(.*)$ index.php?url=$1 

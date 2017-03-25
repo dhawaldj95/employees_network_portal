@@ -5,6 +5,9 @@ session_start();
     require("smarty_configs.php");
     require 'dbms_connection.php';
 
+    print_r($_GET['url']);
+
+
     switch ($_GET['url']) 
     {
     case '':

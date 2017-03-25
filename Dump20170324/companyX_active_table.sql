@@ -16,23 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `nomination_table`
+-- Table structure for table `active_table`
 --
 
-DROP TABLE IF EXISTS `nomination_table`;
+DROP TABLE IF EXISTS `active_table`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `nomination_table` (
+CREATE TABLE `active_table` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nominee_id` int(11) DEFAULT NULL,
-  `nominator_id` int(11) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `fk_nominee_idx` (`nominee_id`),
-  KEY `fk_nominator_idx` (`nominator_id`),
-  CONSTRAINT `fk_nominator` FOREIGN KEY (`nominator_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_nominee` FOREIGN KEY (`nominee_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  KEY `fk_user_id_idx` (`user_id`),
+  CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_table` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `active_table`
+--
+
+LOCK TABLES `active_table` WRITE;
+/*!40000 ALTER TABLE `active_table` DISABLE KEYS */;
+INSERT INTO `active_table` VALUES (2,33,1),(3,34,1),(4,35,0);
+/*!40000 ALTER TABLE `active_table` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -43,4 +51,4 @@ CREATE TABLE `nomination_table` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-03 19:18:42
+-- Dump completed on 2017-03-24 17:35:11
